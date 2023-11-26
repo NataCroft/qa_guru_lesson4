@@ -1,4 +1,4 @@
-package hw_Selenide2;
+package hw.selenide2.l4;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SelenideHover {
 @Test
-    void SelenideHoverSolutions() {
+    void selenideHoverSolutions() {
         open("https://github.com/");
         $x("//button[contains(text(), 'Solutions')]").hover();
         $(".HeaderMenu-dropdown [href='/enterprise']").click();
