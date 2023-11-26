@@ -1,4 +1,4 @@
-package hw__Selenide;
+package hw.selenide.l4;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
@@ -22,7 +22,7 @@ public class SelenideWikiSoftAssertions {
         Configuration.holdBrowserOpen = false;
     }
     @Test
-    void SelenideSoftAssertionsSearch() {
+    void selenideSoftAssertionsSearch() {
         open("/selenide/selenide");
         $("#wiki-tab").click();
         $(".js-wiki-more-pages-link").click();
@@ -31,8 +31,6 @@ public class SelenideWikiSoftAssertions {
 
         $("#user-content-3-using-junit5-extend-test-class").scrollTo();
 
-//div[@class='highlight highlight-source-java notranslate position-relative overflow-auto']
-//        $("#user-content-3-using-junit5-extend-test-class+div+pre")
         $(By.xpath("(//div[@class='highlight highlight-source-java notranslate position-relative overflow-auto'])[4]"))
                 .shouldHave(text("""
                         @ExtendWith({SoftAssertsExtension.class})
