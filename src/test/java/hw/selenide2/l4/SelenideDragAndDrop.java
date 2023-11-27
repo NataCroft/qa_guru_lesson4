@@ -2,7 +2,6 @@ package hw.selenide2.l4;
 
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.DragAndDropOptions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ public class SelenideDragAndDrop {
         }
 
         @Test
-        void successfulDragAndDrop() {
+        void successfulDragAndDropTest() {
 
             open("/drag_and_drop");
             $("#column-a").shouldHave(text("A"));
@@ -28,6 +27,5 @@ public class SelenideDragAndDrop {
             $("#column-a").shouldHave(text("B"));
             $("#column-b").shouldHave(text("A"));
 
-            sleep(4000);
         }
     }
